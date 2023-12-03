@@ -1,7 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const mongodb = require('mongodb');
+// const mongodb = require('mongodb');
 const dbURI = 'mongodb+srv://chunj796:qwer@jaydb.1dp0khb.mongodb.net/?retryWrites=true&w=majority';
+const { MongoClient } = require('mongodb');
 const bodyParser = require('body-parser');
 const app = express();
 
@@ -9,16 +10,18 @@ app.use(express.static('src'));
 app.use(express.static('/src/abis'));
 app.use(bodyParser.json());
 
-mongoose.connect(dbURI);
-var db = mongoose.connection;
+// mongoose.connect(dbURI);
+// var db = mongoose.connection;
 
-db.on('error', function() {
-  console.log('Connection Failed!');
-});
+// db.on('error', function() {
+//   console.log('Connection Failed!');
+// });
 
-db.once('open', function() {
-  console.log('Connected!');
-});
+// db.once('open', function() {
+//   console.log('Connected!');
+// });
+
+let client = new MongoClient(dbURI);
 
 // Define a schema and model
 var CharacterSchema = new mongoose.Schema({
@@ -245,8 +248,4 @@ app.get('/findSkinsbyOwner/:owner', (req, res) => {
 
 app.get('/', function (req, res) {
     res.render('index.html');
-});
-
-app.listen(3000, () => {
-    console.log('App listening on port 3000');
 });
