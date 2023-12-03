@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/dist/truffle-contract.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dist/web3.min.js"></script>    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script> -->
+</head>
+<body>
+    <header>
+        <h1>Project</h1>
+        <p>Current Account: <span id="current_account"></span></p>
+        <p>Eth Balance: <span id="ethBalance"></span> Eth</p>
+    </header>
+
+    <main>
+        <!-- ERC-1155 Token Register Form -->
+        <div id="registerForm" class="form-section">
+            <label for="characterName">Character Name:</label>
+            <input type="text" id="characterName" required>
+            <button type="button" id="registerCharacter">Register Character</button>
+        </div>
+    </main>
+
+    <!-- Buy In-Game Items Form -->
+    <div id="buyInGameItemsForm" class="buy-InGameItems-form">
+        <label for="searchItem">Search an Item:</label>
+        <input type="text" id="searchItem" required>
+    
+        <button type="button" id="SearchItemPrice">Search Price</button>
+        <button type="button" id="buyInGameItem">Buy an Item</button>
+    </div>
+
+    <!-- NFT Skin Registration Form -->
+    <div id="nftSkinForm" class="form-section">
+        <label for="skinName">Skin Name:</label>
+        <input type="text" id="skinName" required>
+        <label for="skinUri">Skin URI:</label>
+        <input type="text" id="skinUri" required>
+        <label for="skinPrice">Skin Price:</label>
+        <input type="number" id="skinPrice" required>
+        <button type="button" id="registerNFTSkin">Register NFT Skin</button>
+    </div>
+
+    <!-- Buy NFT Skin Form -->
+    <div id="buySkinForm" class="form-section">
+        <label for="searchSkin">Search Skin:</label>
+        <input type="text" id="searchSkin" required>
+        <button type="button" id="searchSkinPrice">Search Price</button>
+        <button type="button" id="buySkin">Buy Skin</button>
+    </div>
+
+    <!-- Buy Character Form -->
+    <div id="buyCharacterForm" class="form-section">
+        <label for="searchCharacter">Search Character:</label>
+        <input type="text" id="searchCharacter" required>
+        <button type="button" id="searchCharacterPrice">Search Price</button>
+        <button type="button" id="buyCharacter">Buy Character</button>
+    </div>
+
+    <!-- Character Information -->
+    <div id="characterInfo" class="character-info">
+        <h2>Character Information</h2>
+        <ul id="ownedCharactersList">
+            <!-- Display owned characters here -->
+        </ul>
+        <label for="myCharName">Character Name:</label>
+        <input type="text" id="myCharName">
+        <label for="characterPrice">Change Price:</label>
+        <input type="text" id="characterPrice">
+        <button id="changeCharacterPrice">Change Character Price</button>
+        <button id="registerCharacterOnMarket">Register Character on Market</button>
+        <button id="cancelCharacterRegistration">Cancel Character Registration</button>
+        <h3>Your Skins</h3>
+        <ul id="ownedSkinsList">
+            <!-- Display owned skins here -->
+        </ul>
+        <label for="mySkinName">Skin Name:</label>
+        <input type="text" id="mySkinName">
+        <label for="changeskinPrice">Change Price:</label>
+        <input type="text" id="changeskinPrice">
+        <button id="changeSkinPrice">Change Skin Price</button>
+        <button id="registerSkinOnMarket">Register Skin on Market</button>
+        <button id="cancelSkinRegistration">Cancel Skin Registration</button>
+
+        <!-- <h4>Move Your Skins to Other Characters</h4>
+        <label for="FromCharacter">From:</label>
+        <input type="text" id="FromCharacter" required>
+        <label for="SkinTransfer">Skin:</label>
+        <input type="text" id="SkinTransfer" required>
+        <label for="ToCharacter">To:</label>
+        <input type="text" id="ToCharacter" required>
+        <button id="TransferSkin">Transfer</button> -->
+    </div>
+    
+    <!-- GameMaster Section -->
+    <div id="gameMasterDiv" class="gameMasterDiv">
+        <h2>GameMaster</h2>
+        <div class="form-section">
+            <label for="GoldAddress">Address:</label>
+            <input type="text" id="GoldAddress" class="gold-address-input">
+            <button id="GiveGold">Give Gold</button>
+        </div>
+        <div class="form-section">
+            <label for="GMchar">Character Name:</label>
+            <input type="text" id="GMchar">
+            <button id="UnregisterCharacter">Unregister the Character</button>
+        </div>
+    </div>
+</body>
+</html>

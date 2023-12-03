@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Gothic';
+    src: url('../font/BruceForeverRegular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Metal';
+    src: url('../font/FallingSkyBlack.otf') format('opentype');
+}
+
+body {
+    background-image: url('../img/technology-background.jpg');
+    font-family: 'Metal', sans-serif;
+    margin: 40px;
+    background-color: rgb(22, 5, 41);
+}
+
+header {
+    font-family: 'Gothic', sans-serif;
+    background: rgb(11, 12, 156, 0.2);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    border-radius: 8px;
+}
+
+main {
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+#registerForm,
+#buyInGameItemsForm,
+#nftSkinForm,
+#buySkinForm,
+#buyCharacterForm,
+#gameMasterDiv {
+    background: rgb(11, 12, 156, 0.2);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.character-info {
+    background: rgb(11, 12, 156, 0.2);
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+button {
+    transition: background-color 0.1s, color 0.1s;
+    padding: 3px 5px; /* Top & Bottom, Left & Right Padding */
+    color: white; /* Text color */
+    font-family: 'Metal', sans-serif;
+    background-color: #18406b; /* Background color */
+    border: 2px solid transparent; /* Border */
+    border-radius: 2px;
+}
+
+button:hover {
+    padding: 3px 5px; /* Top & Bottom, Left & Right Padding */
+    color: white; /* Text color */
+    font-family: 'Metal', sans-serif;
+    background-color: #0a223b; /* Background color */
+    border: 2px solid transparent; /* Border */
+    border-radius: 2px;
+}
+
+button:focus {
+    outline: none; /* Remove the default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Custom focus indicator */
+}
+
+button:active {
+    background-color: #004085; /* Even darker background when active */
+}
